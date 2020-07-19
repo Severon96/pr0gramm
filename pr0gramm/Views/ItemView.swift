@@ -14,6 +14,8 @@ struct ItemView: View {
     
     var body: some View {
         URLImage(imageUrl: item.thumb)
+            .frame(width: 50, height: 50, alignment: .leading)
+            .aspectRatio(contentMode: .fit)
     }
 }
 
