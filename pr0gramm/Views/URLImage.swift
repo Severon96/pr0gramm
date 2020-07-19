@@ -15,13 +15,12 @@ struct URLImage: View {
     @ObservedObject var remoteImageManager = RemoteImageManager()
     
     var body: some View {
-        Text("test")
-//        if !remoteImageManager.imageData.isEmpty {
-//            Image(uiImage: UIImage(data: remoteImageManager.imageData)!)
-//                .onAppear {
-//                    self.remoteImageManager.fetchImage(imageUrl: self.imageUrl)
-//            }
-//        }
+        
+        Image(uiImage: ((remoteImageManager.imageData.isEmpty) ? UIImage(systemName: "xmark.octagon") : UIImage(data: remoteImageManager.imageData)!)!)
+            .onAppear {
+                self.remoteImageManager.fetchImage(imageUrl: self.imageUrl)
+        }
+        
     }
 }
 

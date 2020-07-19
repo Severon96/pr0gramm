@@ -13,7 +13,7 @@ class RemoteImageManager: ObservableObject {
     @Published var imageData: Data = Data()
     
     func fetchImage(imageUrl: String) {
-        guard let url = URL(string: imageUrl) else {
+        guard let url = URL(string: "https://img.pr0gramm.com/\(imageUrl)") else {
             return
         }
         
