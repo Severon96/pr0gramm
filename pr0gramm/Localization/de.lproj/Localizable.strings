@@ -6,3 +6,5 @@
   Copyright © 2020 Doctor. All rights reserved.
 */
 "uploadedBy %@" = "Hochgeladen von %@";
+"uploaded: %@" = "Hochgeladen vor: %@";
+"%@ upvotes" = "%@ Blussis";

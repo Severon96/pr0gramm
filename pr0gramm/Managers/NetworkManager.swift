@@ -28,6 +28,8 @@ class NetworkManager: ObservableObject {
                 }
                 
                 let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .secondsSince1970
+                
                 if let results = try? decoder.decode(ItemResult.self, from: unwrappedData) {
                     DispatchQueue.main.async {
                         self.items = results.items

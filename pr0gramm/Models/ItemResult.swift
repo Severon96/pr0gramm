@@ -23,7 +23,7 @@ struct Item: Decodable, Identifiable {
     var userId: Int
     var up: Int
     var down: Int
-    var created: Int
+    var created: Date
     var image: String
     var thumb: String
     var width: Int
