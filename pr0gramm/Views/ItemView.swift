@@ -13,9 +13,14 @@ struct ItemView: View {
     let item: Item
     
     var body: some View {
-        URLImage(imageUrl: item.thumb)
-            .frame(width: 50, height: 50, alignment: .leading)
+        HStack {
+            URLImage(imageUrl: "https://thumb.pr0gramm.com/\(item.thumb)")
+            .clipped()
             .aspectRatio(contentMode: .fit)
+            
+            Text("uploadedBy \(item.user)")
+        }.frame(height: 100)
+        
     }
 }
 

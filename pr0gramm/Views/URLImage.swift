@@ -17,8 +17,7 @@ struct URLImage: View {
     var body: some View {
         
         Image(uiImage: ((remoteImageManager.imageData.isEmpty) ? UIImage(systemName: "xmark.octagon") : UIImage(data: remoteImageManager.imageData)!)!)
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 10, height: 10, alignment: .leading)
+            .resizable()
             .onAppear {
                 self.remoteImageManager.fetchImage(imageUrl: self.imageUrl)
         }
