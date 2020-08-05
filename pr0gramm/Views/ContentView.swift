@@ -12,13 +12,22 @@ struct ContentView: View {
     
     @ObservedObject var networkManager = NetworkManager()
     
+    let data = (1...1000).map { "Item \($0)" }
+
+    let columns = [
+        GridItem(.adaptive(minimum: 100))
+    ]
+    
     var body: some View {
         NavigationView {
             
-            List(networkManager.items) { item in
-                
-                ItemView(item: item)
-                
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(networkManager.items) { item in
+                        ItemView(item: item)
+                    }
+                }
+                .padding(.horizontal)
             }
             .navigationBarTitle("pr0gramm.com")
             

@@ -17,20 +17,7 @@ struct ItemView: View {
             URLImage(imageUrl: "https://thumb.pr0gramm.com/\(item.thumb)")
             .clipped()
             .aspectRatio(contentMode: .fit)
-            
-            VStack(alignment: .leading) {
-                Text("uploadedBy \(item.user)")
-                    .fontWeight(.bold)
-                HStack {
-                    Text("\(String(item.down + item.up)) upvotes")
-                        .opacity(0.5)
-                    Spacer()
-                    Text("uploaded: \(DateUtils.hoursSincePost(item.created))")
-                        .opacity(0.5)
-                }.foregroundColor(.pr0White)
-            }.foregroundColor(.pr0Orange)
         }.frame(height: 100)
-        
     }
 }
 
