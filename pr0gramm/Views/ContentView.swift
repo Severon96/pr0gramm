@@ -23,9 +23,15 @@ struct ContentView: View {
             
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
+                    
                     ForEach(networkManager.items) { item in
-                        ItemView(item: item)
+                    
+                        NavigationLink(destination: DetailView(item: item)) {
+                            ItemView(item: item)
+                        }
+                        
                     }
+                    
                 }
                 .padding(.horizontal)
             }
