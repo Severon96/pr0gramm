@@ -17,12 +17,12 @@ struct ContentView: View {
         NavigationView {
             
             TabView {
-                NewPosts()
+                PostsOverview(loadNew: true)
                 .tabItem {
                     Image(systemName: "plus.message")
                     Text("newPosts")
                 }
-                TopPosts()
+                PostsOverview(loadNew: false)
                 .tabItem {
                     Image(systemName: "heart.circle.fill")
                     Text("topPosts")

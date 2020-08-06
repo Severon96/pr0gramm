@@ -1,5 +1,5 @@
 //
-//  NewPosts.swift
+//  PostsOverview.swift
 //  pr0gramm
 //
 //  Created by Dominik Mack on 06.08.20.
@@ -8,7 +8,9 @@
 
 import SwiftUI
 
-struct NewPosts: View {
+struct PostsOverview: View {
+    
+    let loadNew: Bool
     
     @ObservedObject var networkManager = NetworkManager()
     
@@ -19,7 +21,6 @@ struct NewPosts: View {
     ]
     
     var body: some View {
-        
             ScrollView {
                 LazyVGrid(columns: columns) {
                     
@@ -34,12 +35,20 @@ struct NewPosts: View {
                 }
                 .padding(.horizontal)
             }.onAppear {
-                self.networkManager.fetchNewPosts()            }
+                
+                if loadNew {
+                    self.networkManager.fetchNewPosts()
+                } else {
+                    self.networkManager.fetchTopPosts()
+                }
+                
+                
+            }
     }
 }
 
-struct NewPosts_Previews: PreviewProvider {
+struct PostsOverview_Previews: PreviewProvider {
     static var previews: some View {
-        NewPosts()
+        PostsOverview(loadNew: true)
     }
 }
