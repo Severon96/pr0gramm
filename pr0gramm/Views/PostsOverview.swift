@@ -27,7 +27,24 @@ struct PostsOverview: View {
                     ForEach(networkManager.items) { item in
                     
                         NavigationLink(destination: DetailView(item: item)) {
-                            ItemView(item: item)
+                            
+                            if item.image.hasSuffix(".mp4") {
+                                ItemView(item: item)
+                                    .overlay(
+                                        Image(systemName: "play.fill")
+                                            .resizable()
+                                            .opacity(0.6)
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(height: 50)
+                                            .foregroundColor(.pr0White)
+                            
+                                            
+                                    )
+                            } else {
+                                ItemView(item: item)
+                            }
+                            
+                                
                         }
                         
                     }

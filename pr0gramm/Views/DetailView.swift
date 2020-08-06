@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct DetailView: View {
     
@@ -18,8 +19,7 @@ struct DetailView: View {
             VStack {
                 
                 if self.item.image.hasSuffix(".mp4") {
-                    Text("WebMs cannot be displayed atm")
-                    Text("Sorry ¯\\_(ツ)_/¯")
+                    URLVideo(videoUrl: self.item.image)
                 } else {
                     URLImage(imageUrl: "https://img.pr0gramm.com/\(self.item.image)")
                         .aspectRatio(contentMode: .fit)

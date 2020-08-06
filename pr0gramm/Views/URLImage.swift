@@ -12,7 +12,7 @@ struct URLImage: View {
     
     let imageUrl: String
     
-    @ObservedObject var remoteImageManager = RemoteImageManager()
+    @ObservedObject var remoteImageManager = RemoteMediaManager()
     
     var body: some View {
         

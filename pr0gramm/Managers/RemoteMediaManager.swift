@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import AVKit
 
-class RemoteImageManager: ObservableObject {
+class RemoteMediaManager: ObservableObject {
     
     @Published var imageData: Data = Data()
     
@@ -32,6 +33,14 @@ class RemoteImageManager: ObservableObject {
                 }
             }
         }.resume()
+    }
+    
+    static func generateVideoPlayer(videoUrl urlString: String) -> AVPlayer {
+        guard let url = URL(string: "https://vid.pr0gramm.com/\(urlString)") else {
+            return AVPlayer()
+        }
+        
+        return AVPlayer(url: url)
     }
     
     
