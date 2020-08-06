@@ -16,7 +16,19 @@ class NetworkManager: ObservableObject {
         guard let url = URL(string: "https://pr0gramm.com/api/items/get?promoted=1") else {
             return
         }
+           
+        fetchPosts(url)
+    }
+    
+    func fetchNewPosts() {
+        guard let url = URL(string: "https://pr0gramm.com/api/items/get?promoted=0") else {
+            return
+        }
         
+        fetchPosts(url)
+    }
+    
+    private func fetchPosts(_ url : URL) {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
                 return

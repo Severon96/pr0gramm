@@ -34,8 +34,7 @@ struct NewPosts: View {
                 }
                 .padding(.horizontal)
             }.onAppear {
-                self.networkManager.fetchTopPosts()
-            }
+                self.networkManager.fetchNewPosts()            }
     }
 }
 
