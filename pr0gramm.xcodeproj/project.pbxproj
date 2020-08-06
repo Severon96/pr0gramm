@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8140CDA624C1A41200330288 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CDA524C1A41200330288 /* AppDelegate.swift */; };
-		8140CDA824C1A41200330288 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CDA724C1A41200330288 /* SceneDelegate.swift */; };
 		8140CDAA24C1A41200330288 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CDA924C1A41200330288 /* ContentView.swift */; };
 		8140CDAC24C1A41500330288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8140CDAB24C1A41500330288 /* Assets.xcassets */; };
 		8140CDAF24C1A41500330288 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8140CDAE24C1A41500330288 /* Preview Assets.xcassets */; };
@@ -24,12 +22,11 @@
 		8182B04624D9CC170074C653 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8182B04524D9CC170074C653 /* Color.swift */; };
 		8188EBCA24DB5A8600226C58 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188EBC924DB5A8600226C58 /* DetailView.swift */; };
 		81C9A59D24DC5BE4003792E5 /* PostsOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9A59C24DC5BE4003792E5 /* PostsOverview.swift */; };
+		81C9A5A124DC5E19003792E5 /* pr0gramm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9A5A024DC5E19003792E5 /* pr0gramm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8140CDA224C1A41200330288 /* pr0gramm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pr0gramm.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8140CDA524C1A41200330288 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8140CDA724C1A41200330288 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8140CDA924C1A41200330288 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8140CDAB24C1A41500330288 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8140CDAE24C1A41500330288 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -47,6 +44,7 @@
 		8182B04524D9CC170074C653 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8188EBC924DB5A8600226C58 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		81C9A59C24DC5BE4003792E5 /* PostsOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsOverview.swift; sourceTree = "<group>"; };
+		81C9A5A024DC5E19003792E5 /* pr0gramm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pr0gramm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +83,11 @@
 				8140CDBF24C1B1C000330288 /* Views */,
 				8140CDBC24C1ADA600330288 /* Models */,
 				8140CDB924C1A90000330288 /* Managers */,
-				8140CDA524C1A41200330288 /* AppDelegate.swift */,
-				8140CDA724C1A41200330288 /* SceneDelegate.swift */,
 				8140CDAB24C1A41500330288 /* Assets.xcassets */,
 				8140CDB024C1A41500330288 /* LaunchScreen.storyboard */,
 				8140CDB324C1A41500330288 /* Info.plist */,
 				8140CDAD24C1A41500330288 /* Preview Content */,
+				81C9A5A024DC5E19003792E5 /* pr0gramm.swift */,
 			);
 			path = pr0gramm;
 			sourceTree = "<group>";
@@ -236,12 +233,11 @@
 				8182B04624D9CC170074C653 /* Color.swift in Sources */,
 				81821E8A24DC2C19002A84D3 /* Settings.swift in Sources */,
 				81C9A59D24DC5BE4003792E5 /* PostsOverview.swift in Sources */,
-				8140CDA624C1A41200330288 /* AppDelegate.swift in Sources */,
 				8188EBCA24DB5A8600226C58 /* DetailView.swift in Sources */,
 				8182B04324D9C6BC0074C653 /* DateUtils.swift in Sources */,
 				8140CDBE24C1ADB800330288 /* ItemResult.swift in Sources */,
 				8140CDC524C1B6B400330288 /* RemoteImageManager.swift in Sources */,
-				8140CDA824C1A41200330288 /* SceneDelegate.swift in Sources */,
+				81C9A5A124DC5E19003792E5 /* pr0gramm.swift in Sources */,
 				8140CDAA24C1A41200330288 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
