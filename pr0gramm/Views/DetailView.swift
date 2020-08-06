@@ -14,9 +14,17 @@ struct DetailView: View {
     
     var body: some View {
         ScrollView {
+
             VStack {
-                URLImage(imageUrl: "https://img.pr0gramm.com/\(self.item.image)")
-                    .aspectRatio(contentMode: .fit)
+                
+                if self.item.image.hasSuffix(".mp4") {
+                    Text("WebMs cannot be displayed atm")
+                    Text("Sorry ¯\\_(ツ)_/¯")
+                } else {
+                    URLImage(imageUrl: "https://img.pr0gramm.com/\(self.item.image)")
+                        .aspectRatio(contentMode: .fit)
+                }
+                
                 HStack {
                     Text("uploadedBy \(item.user)")
                 }

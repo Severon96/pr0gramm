@@ -5,6 +5,13 @@
   Created by Doctor on 04.08.20.
   Copyright © 2020 Doctor. All rights reserved.
 */
+
+//Tabs
+"newPosts" = "Neu";
+"topPosts" = "Beliebt";
+"settings" = "Einstellungen";
+
+//Post Overview
 "uploadedBy %@" = "Hochgeladen von %@";
 "uploaded: %@" = "Hochgeladen vor: %@";
 "%@ upvotes" = "%@ Blussis";

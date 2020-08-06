@@ -11,35 +11,31 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var networkManager = NetworkManager()
-
-    let columns = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
+    @State private var selectedView = "SFW"
     
     var body: some View {
         NavigationView {
             
-            ScrollView {
-                LazyVGrid(columns: columns) {
-                    
-                    ForEach(networkManager.items) { item in
-                    
-                        NavigationLink(destination: DetailView(item: item)) {
-                            ItemView(item: item)
-                        }
-                        
-                    }
-                    
+            TabView {
+                NewPosts()
+                .tabItem {
+                    Image(systemName: "plus.message")
+                    Text("newPosts")
                 }
-                .padding(.horizontal)
+                TopPosts()
+                .tabItem {
+                    Image(systemName: "heart.circle.fill")
+                    Text("topPosts")
+                }
+                Settings()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("settings")
+                }
             }
             .navigationBarTitle("pr0gramm.com")
             
-        }.onAppear {
-            self.networkManager.fetchTopPosts()
-        }
+        }.foregroundColor(.pr0Orange)
     }
 }
 
