@@ -11,18 +11,18 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var networkManager = NetworkManager()
-    
-    let data = (1...1000).map { "Item \($0)" }
 
     let columns = [
-        GridItem(.adaptive(minimum: 100))
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())
     ]
     
     var body: some View {
         NavigationView {
             
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
+                LazyVGrid(columns: columns) {
                     
                     ForEach(networkManager.items) { item in
                     

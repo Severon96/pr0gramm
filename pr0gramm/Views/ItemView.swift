@@ -17,7 +17,7 @@ struct ItemView: View {
             URLImage(imageUrl: "https://thumb.pr0gramm.com/\(item.thumb)")
             .clipped()
             .aspectRatio(contentMode: .fit)
-        }.frame(height: 100)
+        }
     }
 }
 
