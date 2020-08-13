@@ -19,6 +19,8 @@ struct DetailView: View {
             VStack {
                 
                 if self.item.image.hasSuffix(".mp4") {
+                    Text("webmNotWorking")
+                        .padding(10)
                     URLVideo(videoUrl: self.item.image)
                 } else {
                     URLImage(imageUrl: "https://img.pr0gramm.com/\(self.item.image)")

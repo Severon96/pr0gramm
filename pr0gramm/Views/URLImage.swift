@@ -14,13 +14,26 @@ struct URLImage: View {
     
     @ObservedObject var remoteImageManager = RemoteMediaManager()
     
+    init(imageUrl: String) {
+        self.imageUrl = imageUrl
+        print("Image Data is Empty: \(remoteImageManager.imageData.isEmpty)")
+    }
+
     var body: some View {
         
-        Image(uiImage: ((remoteImageManager.imageData.isEmpty) ? UIImage(systemName: "xmark.octagon") : UIImage(data: remoteImageManager.imageData)!)!)
-            .resizable()
-            .onAppear {
-                self.remoteImageManager.fetchImage(imageUrl: self.imageUrl)
+        HStack {
+            if(remoteImageManager.imageData.isEmpty) {
+                ProgressView()
+            } else {
+                Image(uiImage: ((remoteImageManager.imageData.isEmpty) ? UIImage(systemName: "xmark.octagon") : UIImage(data: remoteImageManager.imageData)!)!)
+                    .resizable()
+            }
+        }.onAppear {
+            self.remoteImageManager.fetchImage(imageUrl: self.imageUrl)
         }
+        
+        
+            
         
     }
 }

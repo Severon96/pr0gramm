@@ -16,3 +16,5 @@
 "uploaded: %@" = "Uploaded: %@";
 "%@ upvotes" = "%@ Upvotes";
 
+//Information
+"webmNotWorking" = "If you don't see anything here, this means that SwiftUI is bugging. Maybe this is fixed by Apple at some time. But at the moment I can't do anything against it.";

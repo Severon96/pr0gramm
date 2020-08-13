@@ -15,3 +15,6 @@
 "uploadedBy %@" = "Hochgeladen von %@";
 "uploaded: %@" = "Hochgeladen vor: %@";
 "%@ upvotes" = "%@ Blussis";
+
+//Information
+"webmNotWorking" = "Wenn du hier gerade kein WebM siehst, dann bedeutet das, das SwiftUI wieder am zicken ist. Ich kann im Moment nur hoffen, dass Apple das in der Zukunft irgendwann mal fixed.";

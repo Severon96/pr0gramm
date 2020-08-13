@@ -35,12 +35,27 @@ class RemoteMediaManager: ObservableObject {
         }.resume()
     }
     
-    static func generateVideoPlayer(videoUrl urlString: String) -> AVPlayer {
+    func generateVideoPlayerLayer(videoUrl urlString: String) -> AVPlayerLayer {
         guard let url = URL(string: "https://vid.pr0gramm.com/\(urlString)") else {
-            return AVPlayer()
+            return AVPlayerLayer()
         }
         
-        return AVPlayer(url: url)
+        let playerLayer = AVPlayerLayer()
+        
+        let avPlayer = AVQueuePlayer(url: url)
+        let playerItem = AVPlayerItem(url: url)
+        
+        _ = AVPlayerLooper(player: avPlayer, templateItem: playerItem)
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
+        } catch(let error) {
+            print(error.localizedDescription)
+        }
+
+        playerLayer.player = avPlayer
+        
+        return playerLayer
     }
     
     
