@@ -27,9 +27,6 @@ struct PostView: View {
                 
                 PostDetailsView(item: item)
             }
-            .padding(
-                EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-            )
         }
         
     }

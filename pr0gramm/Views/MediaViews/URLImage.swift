@@ -32,9 +32,6 @@ struct URLImage: View {
             self.remoteImageManager.fetchImage(imageUrl: self.imageUrl)
         }
         
-        
-            
-        
     }
 }
 

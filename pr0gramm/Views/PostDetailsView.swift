@@ -26,23 +26,34 @@ struct PostDetailsView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text(String(score))
+            HStack(spacing: 30) {
+                HStack {
+                    PlusButton(score: score)
                     .font(.system(size: 30))
-                VStack {
+                    
+                    Text(String(score))
+                        .font(.system(size: 30))
+                }
+                
+                VStack(alignment: .leading) {
                     HStack {
                         Image(systemName: "person")
                         Text(item.user)
-                            .font(.system(size: 20))
                     }
+                    .font(.system(size: 20))
+                    
                     HStack {
                         Image(systemName: "clock")
                         Text(date)
                     }
                 }
+                Spacer()
             }
         }
         .foregroundColor(.pr0White)
+        .padding(
+            EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+        )
     }
 }
 
