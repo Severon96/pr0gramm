@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "GSPlayer",
+        "repositoryURL": "https://github.com/wxxsw/GSPlayer.git",
+        "state": {
+          "branch": null,
+          "revision": "95c57e6a9aa0aa39ff3c52d0376ddf94e400c574",
+          "version": "0.2.16"
+        }
+      },
+      {
+        "package": "VideoPlayer",
+        "repositoryURL": "https://github.com/wxxsw/VideoPlayer.git",
+        "state": {
+          "branch": null,
+          "revision": "eb1e1f25b47a7db5912c156b77b168667070e3f3",
+          "version": "1.1.5"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
