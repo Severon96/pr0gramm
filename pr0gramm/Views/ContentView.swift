@@ -18,10 +18,10 @@ struct ContentView: View {
             
             TabView {
                 PostsOverview(loadNew: true)
-                .tabItem {
+                    .tabItem {
                     Image(systemName: "plus.message")
                     Text("newPosts")
-                }
+                }                
                 PostsOverview(loadNew: false)
                 .tabItem {
                     Image(systemName: "heart.circle.fill")
