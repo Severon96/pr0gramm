@@ -17,16 +17,19 @@
 		8140CDC124C1B27100330288 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CDC024C1B27100330288 /* ItemView.swift */; };
 		8140CDC324C1B4D600330288 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CDC224C1B4D600330288 /* URLImage.swift */; };
 		8140CDC524C1B6B400330288 /* RemoteMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140CDC424C1B6B400330288 /* RemoteMediaManager.swift */; };
+		8160A82024E6DBB300AA7B68 /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160A81F24E6DBB300AA7B68 /* InfoCardView.swift */; };
 		817FC81F24E5B8170089D7FB /* VideoErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817FC81E24E5B8170089D7FB /* VideoErrors.swift */; };
 		81821E8A24DC2C19002A84D3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81821E8924DC2C19002A84D3 /* Settings.swift */; };
 		8182B03A24D9BF030074C653 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8182B03C24D9BF030074C653 /* Localizable.strings */; };
 		8182B04324D9C6BC0074C653 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8182B04224D9C6BC0074C653 /* DateUtils.swift */; };
 		8182B04624D9CC170074C653 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8182B04524D9CC170074C653 /* Color.swift */; };
-		8188EBCA24DB5A8600226C58 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188EBC924DB5A8600226C58 /* DetailView.swift */; };
+		8188EBCA24DB5A8600226C58 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188EBC924DB5A8600226C58 /* PostView.swift */; };
 		81C9A59D24DC5BE4003792E5 /* PostsOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9A59C24DC5BE4003792E5 /* PostsOverview.swift */; };
 		81C9A5A124DC5E19003792E5 /* pr0gramm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9A5A024DC5E19003792E5 /* pr0gramm.swift */; };
 		81C9A5A324DC5EDF003792E5 /* URLVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9A5A224DC5EDF003792E5 /* URLVideo.swift */; };
 		81C9A5A524DC678E003792E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9A5A424DC678E003792E5 /* SceneDelegate.swift */; };
+		81D96B4D24E6DD3C001AB881 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D96B4C24E6DD3C001AB881 /* PostDetailsView.swift */; };
+		81D96B5024E6E247001AB881 /* DateHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 81D96B4F24E6E247001AB881 /* DateHelper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,7 @@
 		8140CDC024C1B27100330288 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		8140CDC224C1B4D600330288 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		8140CDC424C1B6B400330288 /* RemoteMediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMediaManager.swift; sourceTree = "<group>"; };
+		8160A81F24E6DBB300AA7B68 /* InfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardView.swift; sourceTree = "<group>"; };
 		817FC81E24E5B8170089D7FB /* VideoErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoErrors.swift; sourceTree = "<group>"; };
 		81821E8924DC2C19002A84D3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		8182B03B24D9BF030074C653 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -47,11 +51,12 @@
 		8182B04024D9C0BF0074C653 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8182B04224D9C6BC0074C653 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		8182B04524D9CC170074C653 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		8188EBC924DB5A8600226C58 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		8188EBC924DB5A8600226C58 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		81C9A59C24DC5BE4003792E5 /* PostsOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsOverview.swift; sourceTree = "<group>"; };
 		81C9A5A024DC5E19003792E5 /* pr0gramm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pr0gramm.swift; sourceTree = "<group>"; };
 		81C9A5A224DC5EDF003792E5 /* URLVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLVideo.swift; sourceTree = "<group>"; };
 		81C9A5A424DC678E003792E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		81D96B4C24E6DD3C001AB881 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D96B5024E6E247001AB881 /* DateHelper in Frameworks */,
 				812316F924E6C5CE00451DB4 /* VideoPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,15 +136,33 @@
 		8140CDBF24C1B1C000330288 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8160A82224E6DC8C00AA7B68 /* MainViews */,
+				8160A82124E6DC4400AA7B68 /* MediaViews */,
 				8140CDA924C1A41200330288 /* ContentView.swift */,
-				8188EBC924DB5A8600226C58 /* DetailView.swift */,
+				8188EBC924DB5A8600226C58 /* PostView.swift */,
 				8140CDC024C1B27100330288 /* ItemView.swift */,
+				8160A81F24E6DBB300AA7B68 /* InfoCardView.swift */,
+				81D96B4C24E6DD3C001AB881 /* PostDetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8160A82124E6DC4400AA7B68 /* MediaViews */ = {
+			isa = PBXGroup;
+			children = (
 				8140CDC224C1B4D600330288 /* URLImage.swift */,
 				81C9A5A224DC5EDF003792E5 /* URLVideo.swift */,
+			);
+			path = MediaViews;
+			sourceTree = "<group>";
+		};
+		8160A82224E6DC8C00AA7B68 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
 				81C9A59C24DC5BE4003792E5 /* PostsOverview.swift */,
 				81821E8924DC2C19002A84D3 /* Settings.swift */,
 			);
-			path = Views;
+			path = MainViews;
 			sourceTree = "<group>";
 		};
 		817FC81D24E5B7FE0089D7FB /* Errors */ = {
@@ -191,6 +215,7 @@
 			name = pr0gramm;
 			packageProductDependencies = (
 				812316F824E6C5CE00451DB4 /* VideoPlayer */,
+				81D96B4F24E6E247001AB881 /* DateHelper */,
 			);
 			productName = pr0gramm;
 			productReference = 8140CDA224C1A41200330288 /* pr0gramm.app */;
@@ -223,6 +248,7 @@
 			mainGroup = 8140CD9924C1A41200330288;
 			packageReferences = (
 				812316F724E6C5CE00451DB4 /* XCRemoteSwiftPackageReference "VideoPlayer" */,
+				81D96B4E24E6E247001AB881 /* XCRemoteSwiftPackageReference "DateHelper" */,
 			);
 			productRefGroup = 8140CDA324C1A41200330288 /* Products */;
 			projectDirPath = "";
@@ -260,12 +286,14 @@
 				8182B04624D9CC170074C653 /* Color.swift in Sources */,
 				81821E8A24DC2C19002A84D3 /* Settings.swift in Sources */,
 				81C9A59D24DC5BE4003792E5 /* PostsOverview.swift in Sources */,
-				8188EBCA24DB5A8600226C58 /* DetailView.swift in Sources */,
+				8188EBCA24DB5A8600226C58 /* PostView.swift in Sources */,
 				8182B04324D9C6BC0074C653 /* DateUtils.swift in Sources */,
 				8140CDBE24C1ADB800330288 /* ItemResult.swift in Sources */,
 				81C9A5A324DC5EDF003792E5 /* URLVideo.swift in Sources */,
 				8140CDC524C1B6B400330288 /* RemoteMediaManager.swift in Sources */,
 				81C9A5A124DC5E19003792E5 /* pr0gramm.swift in Sources */,
+				81D96B4D24E6DD3C001AB881 /* PostDetailsView.swift in Sources */,
+				8160A82024E6DBB300AA7B68 /* InfoCardView.swift in Sources */,
 				8140CDAA24C1A41200330288 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +511,14 @@
 				minimumVersion = 1.1.5;
 			};
 		};
+		81D96B4E24E6E247001AB881 /* XCRemoteSwiftPackageReference "DateHelper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/melvitax/DateHelper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -490,6 +526,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 812316F724E6C5CE00451DB4 /* XCRemoteSwiftPackageReference "VideoPlayer" */;
 			productName = VideoPlayer;
+		};
+		81D96B4F24E6E247001AB881 /* DateHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81D96B4E24E6E247001AB881 /* XCRemoteSwiftPackageReference "DateHelper" */;
+			productName = DateHelper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

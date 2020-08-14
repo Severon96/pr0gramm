@@ -9,28 +9,27 @@
 import SwiftUI
 import AVKit
 
-struct DetailView: View {
+struct PostView: View {
     
     let item: Item
     
     var body: some View {
         ScrollView {
-
             VStack {
                 
                 if self.item.image.hasSuffix(".mp4") {
-                    Text("webmNotWorking")
-                        .padding(10)
+                    InfoCardView(infoMsg: "webmNotWorking")
                     URLVideo(videoUrl: self.item.image)
                 } else {
                     URLImage(imageUrl: "https://img.pr0gramm.com/\(self.item.image)")
                         .aspectRatio(contentMode: .fit)
                 }
                 
-                HStack {
-                    Text("uploadedBy \(item.user)")
-                }
+                PostDetailsView(item: item)
             }
+            .padding(
+                EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+            )
         }
         
     }
@@ -38,7 +37,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(item: previewItem)
+        PostView(item: previewItem)
     }
 }
 

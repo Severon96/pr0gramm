@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import DateHelper
 
 class DateUtils {
     
@@ -25,6 +26,13 @@ class DateUtils {
         minuteString = minutes < 10 ? "0\(minutes)" : String(minutes)
         
         return String("\(hours):\(minuteString)")
+    }
+    
+    static func dateHelperFunction (_ uploaded : Date) -> String {
+        let dateString = uploaded.toStringWithRelativeTime()
+        print(dateString)
+        
+        return dateString
     }
     
 }

@@ -13,8 +13,22 @@
 
 //Post Overview
 "uploadedBy %@" = "Uploaded by %@";
-"uploaded: %@" = "Uploaded: %@";
 "%@ upvotes" = "%@ Upvotes";
+
+//Times
+"just now" = "just now";
+"%.f seconds ago" = "%.f seconds ago";
+"1 minute ago" = "1 minute ago";
+"%.f minutes ago" = "%.f minutes ago";
+"%.f hours ago" = "%.f hours ago";
+"yesterday" = "yesterday";
+"%.f days ago" = "%.f days ago";
+"last week" = "last week";
+"%.f weeks ago" = "%.f weeks ago";
+"last month" = "last month";
+"%.f months ago" = "%.f months ago";
+"last year" = "last year";
+"%.f years ago" = "%.f years ago";
 
 //Information
 "webmNotWorking" = "If you don't see anything here, this means that SwiftUI is bugging. Maybe this is fixed by Apple at some time. But at the moment I can't do anything against it.";

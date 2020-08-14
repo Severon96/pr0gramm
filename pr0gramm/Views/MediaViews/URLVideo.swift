@@ -38,11 +38,15 @@ struct URLVideo: View {
                 print("Mute")
             }, label: {
                 if mute {
-                    Image(systemName: "speaker.wave.3")
-                } else {
                     Image(systemName: "speaker.slash")
+                } else {
+                    Image(systemName: "speaker.wave.3")
                 }
             })
+            .frame(width: 100, alignment: .bottomLeading)
+            .aspectRatio(contentMode: .fit)
+            .foregroundColor(.pr0White)
+            .shadow(color: .black, radius: 10)
         }
         
     }

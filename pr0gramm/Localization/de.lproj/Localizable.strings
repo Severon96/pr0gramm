@@ -13,8 +13,22 @@
 
 //Post Overview
 "uploadedBy %@" = "Hochgeladen von %@";
-"uploaded: %@" = "Hochgeladen vor: %@";
 "%@ upvotes" = "%@ Blussis";
+
+//Times
+"just now" = "Genau jetzt";
+"%.f seconds ago" = "Vor %.f Sekunden";
+"1 minute ago" = "Vor einer Minute";
+"%.f minutes ago" = "Vor %.f Minuten";
+"%.f hours ago" = "Vor %.f Stunden";
+"yesterday" = "Gestern";
+"%.f days ago" = "Vor %.f Tagen";
+"last week" = "Letzte Woche";
+"%.f weeks ago" = "Vor %.f Wochen";
+"last month" = "Letzten Monat";
+"%.f months ago" = "Vor %.f Monaten";
+"last year" = "Letztes Jahr";
+"%.f years ago" = "Vor %.f Jahren";
 
 //Information
 "webmNotWorking" = "Wenn du hier gerade kein WebM siehst, dann bedeutet das, das SwiftUI wieder am zicken ist. Ich kann im Moment nur hoffen, dass Apple das in der Zukunft irgendwann mal fixed.";
