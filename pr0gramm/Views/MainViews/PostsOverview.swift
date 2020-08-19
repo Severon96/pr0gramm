@@ -21,30 +21,40 @@ struct PostsOverview: View {
     ]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns) {
-                
-                ForEach(networkManager.items) { item in
-                
-                    NavigationLink(destination: PostView(item: item)) {
-                        
-                        if item.image.hasSuffix(".mp4") {
-                            ItemView(item: item)
-                                .overlay(
-                                    Image(systemName: "play.fill")
-                                        .resizable()
-                                        .opacity(0.6)
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(height: 50)
-                                        .foregroundColor(.pr0White)
-                                )
-                        } else {
-                            ItemView(item: item)
+        VStack {
+            if !networkManager.items.isEmpty {
+                    ScrollView {
+                        LazyVGrid(columns: columns) {
+                            
+                            ForEach(networkManager.items) { item in
+                            
+                                NavigationLink(destination: PostView(item: item)) {
+                                    
+                                    if item.image.hasSuffix(".mp4") {
+                                        ItemView(item: item)
+                                            .overlay(
+                                                Image(systemName: "play.fill")
+                                                    .resizable()
+                                                    .opacity(0.6)
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(height: 50)
+                                                    .foregroundColor(.pr0White)
+                                            )
+                                    } else {
+                                        ItemView(item: item)
+                                    }
+                                }
+                            }
                         }
+                        .padding(.horizontal)
                     }
+                } else {
+                    Spacer()
+                    ProgressView()
+                    Text("posts.loading")
+                        .foregroundColor(.pr0White)
+                    Spacer()
                 }
-            }
-            .padding(.horizontal)
         }.onAppear {
             
             if loadNew {

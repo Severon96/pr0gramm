@@ -10,16 +10,22 @@ import SwiftUI
 
 struct PlusButton: View {
     
-    let score: Int
+    @State var score: Int
     
     @State private var rotationDegrees = CGFloat(0)
     @State private var postLiked: Bool = false
     
     var body: some View {
         Button(action: {
-            print("Post has now \(score + 1) Blussis.")
-            
             self.postLiked.toggle()
+            
+            if self.postLiked {
+                self.score += 1
+            } else {
+                self.score -= 1
+            }
+            
+            print("Post has now \(score) Blussis.")
             
             withAnimation {
                 self.rotationDegrees += 360

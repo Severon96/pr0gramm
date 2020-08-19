@@ -16,12 +16,12 @@ struct InfoCardView: View {
         Text(infoMsg)
             .padding(10)
             .font(.system(size: 12))
-        .cornerRadius(10)
-        .background(Color("pr0Grey"))
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color("pr0White"), lineWidth: 0.5)
-        )
+            .cornerRadius(10)
+            .background(Color("pr0Grey"))
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color("pr0White"), lineWidth: 0.5)
+            )
     }
 }
 

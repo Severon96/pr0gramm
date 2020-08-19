@@ -14,6 +14,7 @@
 //Post Overview
 "uploadedBy %@" = "Hochgeladen von %@";
 "%@ upvotes" = "%@ Blussis";
+"posts.loading" = "Lade Posts...";
 
 //Times
 "just now" = "Genau jetzt";
