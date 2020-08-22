@@ -13,11 +13,11 @@ struct InfoCardView: View {
     let infoMsg: String
     
     var body: some View {
-        Text(infoMsg)
+        Text(LocalizedStringKey(infoMsg))
             .padding(10)
             .font(.system(size: 12))
             .cornerRadius(10)
-            .background(Color("pr0Grey"))
+            .background(Color("pr0Black"))
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color("pr0White"), lineWidth: 0.5)

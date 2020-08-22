@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ItemView: View {
+struct OverviewItem: View {
     
     let item: Item
     
@@ -23,7 +23,7 @@ struct ItemView: View {
 
 struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemView(item: item)
+        OverviewItem(item: item)
             .previewLayout(.sizeThatFits)
             .environment(\.colorScheme, .dark)
             .environment(\.locale, .init(identifier: "en_US"))

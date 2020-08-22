@@ -10,34 +10,36 @@ import SwiftUI
 
 struct ContentView: View {
     
+    enum Tab {
+        case newPosts
+        case topPosts
+        case settings
+    }
+    
     @ObservedObject var networkManager = NetworkManager()
-    @State private var selectedView = "SFW"
+    @State private var activeTab: Tab = .newPosts
     
     var body: some View {
-        NavigationView {
+        TabView(selection: $activeTab) {
             
-            TabView {
-                PostsOverview(loadNew: true)
-                    .tabItem {
+            PostsOverview(loadNew: true)
+                .tabItem {
                     Image(systemName: "plus.message")
                     Text("newPosts")
-                }                
-                PostsOverview(loadNew: false)
+                }.tag(Tab.newPosts)
+            PostsOverview(loadNew: false)
                 .tabItem {
                     Image(systemName: "heart.circle.fill")
                     Text("topPosts")
-                }
-                Settings()
+                }.tag(Tab.topPosts)
+            Settings()
                 .tabItem {
                     Image(systemName: "gear")
                     Text("settings")
-                }
-            }
-            .navigationBarTitle("pr0gramm.com")
+                }.tag(Tab.settings)
             
         }.foregroundColor(.pr0Orange)
     }
-    
     
 }
 

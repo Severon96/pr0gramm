@@ -18,7 +18,6 @@ struct PostView: View {
             VStack {
                 
                 if self.item.image.hasSuffix(".mp4") {
-                    InfoCardView(infoMsg: "webmNotWorking")
                     URLVideo(videoUrl: self.item.image)
                 } else {
                     URLImage(imageUrl: "https://img.pr0gramm.com/\(self.item.image)")
@@ -27,8 +26,7 @@ struct PostView: View {
                 
                 PostDetailsView(item: item)
             }
-        }
-        
+        }.navigationBarTitleDisplayMode(.inline)
     }
 }
 

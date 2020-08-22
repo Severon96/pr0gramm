@@ -25,14 +25,28 @@ struct URLVideo: View {
     }
     
     var body: some View {
-        ZStack {
+        VStack {
             VideoPlayer(url: realVideoUrl, play: $play, time: $time)
                 .autoReplay(true)
                 .mute(mute)
-                .aspectRatio(contentMode: .fill)
+                .aspectRatio(contentMode: .fit)
                 .onDisappear {
                     play = false
                 }
+        }.navigationBarItems(trailing: HStack {
+            Button(action: {
+                self.play.toggle()
+            }, label: {
+                if play {
+                    Image(systemName: "play")
+                } else {
+                    Image(systemName: "pause")
+                }
+            })
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 30, height: 30)
+            .foregroundColor(.accentColor)
+            
             Button(action: {
                 self.mute.toggle()
                 print("Mute")
@@ -43,12 +57,10 @@ struct URLVideo: View {
                     Image(systemName: "speaker.wave.3")
                 }
             })
-            .frame(width: 100, alignment: .bottomLeading)
             .aspectRatio(contentMode: .fit)
-            .foregroundColor(.pr0White)
-            .shadow(color: .black, radius: 10)
-        }
-        
+            .frame(width: 30, height: 30)
+            .foregroundColor(.accentColor)
+        })
     }
 }
 
