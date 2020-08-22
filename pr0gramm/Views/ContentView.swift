@@ -10,14 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    enum Tab {
-        case newPosts
-        case topPosts
-        case settings
-    }
-    
     @ObservedObject var networkManager = NetworkManager()
-    @State private var activeTab: Tab = .newPosts
+    @ObservedObject var settingsManager = SettingsManager.shared
+    @State private var activeTab: Tab = Tab(rawValue: SettingsManager.shared.defaultTab) ?? .topPosts
     
     var body: some View {
         TabView(selection: $activeTab) {
@@ -32,15 +27,21 @@ struct ContentView: View {
                     Image(systemName: "heart.circle.fill")
                     Text("topPosts")
                 }.tag(Tab.topPosts)
-            Settings()
+            SettingsView()
                 .tabItem {
                     Image(systemName: "gear")
                     Text("settings")
                 }.tag(Tab.settings)
             
-        }.foregroundColor(.pr0Orange)
+        }
     }
     
+}
+
+enum Tab: String, Codable {
+    case newPosts
+    case topPosts
+    case settings
 }
 
 struct ContentView_Previews: PreviewProvider {

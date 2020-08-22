@@ -15,6 +15,12 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
+                Section(header: Text("settings.accountSettings"), content: {
+                    NavigationLink(destination: LoginView()) {
+                        Text("settings.login")
+                    }
+                })
+                
                 Section(header: Text("settings.general"), content: {
                     Picker("settings.general.defaultTab", selection: Binding.init(
                         get: { settingsManager.defaultTab },

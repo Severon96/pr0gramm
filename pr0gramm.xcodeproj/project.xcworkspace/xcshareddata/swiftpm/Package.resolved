@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "SchafKit",
+        "repositoryURL": "https://github.com/Quintschaf/SchafKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "5be67a634c91446a68769d1bbda0e3792105ef81",
+          "version": null
+        }
+      },
+      {
         "package": "VideoPlayer",
         "repositoryURL": "https://github.com/wxxsw/VideoPlayer.git",
         "state": {

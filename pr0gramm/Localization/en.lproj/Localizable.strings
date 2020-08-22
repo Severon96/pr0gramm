@@ -8,8 +8,21 @@
 
 //Tabs
 "newPosts" = "New";
-"topPosts" = "Popular";
+"topPosts" = "Top";
 "settings" = "Settings";
+
+//Settings
+"settings.accountSettings" = "Account Settings";
+"settings.login" = "Login";
+"settings.general" = "General Settings";
+"settings.general.defaultTab" = "Default View";
+
+//Login
+"login.username" = "Username";
+"login.cha0s" = "cha0s";
+"login.password" = "Password";
+"login.schmusi" = "Schmusi123";
+"login.login" = "Login";
 
 //Post Overview
 "uploadedBy %@" = "Uploaded by %@";

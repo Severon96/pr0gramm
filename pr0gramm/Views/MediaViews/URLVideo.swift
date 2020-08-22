@@ -43,13 +43,9 @@ struct URLVideo: View {
                     Image(systemName: "pause")
                 }
             })
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 30, height: 30)
-            .foregroundColor(.accentColor)
             
             Button(action: {
                 self.mute.toggle()
-                print("Mute")
             }, label: {
                 if mute {
                     Image(systemName: "speaker.slash")
@@ -57,9 +53,6 @@ struct URLVideo: View {
                     Image(systemName: "speaker.wave.3")
                 }
             })
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 30, height: 30)
-            .foregroundColor(.accentColor)
         })
     }
 }

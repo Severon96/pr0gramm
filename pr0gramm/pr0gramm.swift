@@ -14,6 +14,8 @@ import AVFoundation
 @main
 struct pr0gramm: App {
     
+    
+    
     init() {
         // Audio of the app ignores the mute switch
         do {

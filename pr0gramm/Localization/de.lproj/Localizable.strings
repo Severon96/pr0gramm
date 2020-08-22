@@ -11,6 +11,19 @@
 "topPosts" = "Beliebt";
 "settings" = "Einstellungen";
 
+//Settings
+"settings.accountSettings" = "Account Einstellungen";
+"settings.login" = "Anmelden";
+"settings.general" = "Allgemeine Einstellungen";
+"settings.general.defaultTab" = "Standard-Ansicht";
+
+//Login
+"login.username" = "Benutzername";
+"login.cha0s" = "cha0s";
+"login.password" = "Passwort";
+"login.schmusi" = "Schmusi123";
+"login.login" = "Anmelden";
+
 //Post Overview
 "uploadedBy %@" = "Hochgeladen von %@";
 "%@ upvotes" = "%@ Blussis";
