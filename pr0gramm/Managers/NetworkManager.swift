@@ -69,8 +69,9 @@ class NetworkManager: ObservableObject {
                 
                 if let result = try? decoder.decode(CaptchaResult.self, from: data) {
                     DispatchQueue.main.async {
-                        print(result)
                         self.captcha = result
+                        
+                        print("Captcha with token \(self.captcha.token) assigned!")
                     }
                 } else {
                     print("ERROR: Decoder Error:")
@@ -96,7 +97,7 @@ class NetworkManager: ObservableObject {
                 guard let unwrappedData = data else {
                     return
                 }
-                
+
                populator(unwrappedData)
                 
             } else {

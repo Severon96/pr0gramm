@@ -27,7 +27,7 @@ struct LoginView: View {
                     SecureField("login.schmusi", text: $pass)
                 }
                 
-                Image(uiImage: ((networkManager.captcha.captcha!.isEmpty) ? UIImage(systemName: "xmark.octagon") : UIImage(data: networkManager.captcha.captcha!)!)!)
+                Image(uiImage: ((networkManager.captcha.captcha.isEmpty) ? UIImage(systemName: "xmark.octagon") : UIImage(data: networkManager.captcha.captcha )!)!)
                     .resizable()
                 
                 Button(action: {
