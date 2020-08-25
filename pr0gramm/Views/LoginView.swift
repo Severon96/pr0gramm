@@ -15,6 +15,7 @@ struct LoginView: View {
     
     @State var user: String = .empty
     @State var pass: String = .empty
+    @State var captcha: String = .empty
     
     var body: some View {
         VStack {
@@ -31,21 +32,33 @@ struct LoginView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                 
+                TextField("login.captcha.placeholder", text: $captcha)
+                    .disableAutocorrection(true)
+                    .autocapitalization(.none)
+                
                 Button(action: {
-                    print("\(user)")
-                    print("\(pass)")
+                    networkManager.doLogin(user: user, pass: pass, captcha: captcha, token: networkManager.captcha.token)
+                    networkManager.fetchCaptcha(getRandomDouble())
                 }, label: {
                     Text("login.login")
                 })
-                .disabled(self.user.isEmpty || self.pass.isEmpty)
+                .disabled(self.user.isEmpty || self.pass.isEmpty || self.captcha.isEmpty || networkManager.captcha.token.isEmpty)
+                
+                if(networkManager.login.success) {
+                    Text("Success \(networkManager.login.ts)")
+                } else {
+                    Text("No success \(networkManager.login.ts)")
+                }
             }
             
         }.navigationBarTitle("settings.login")
         .onAppear {
-            let randomDobbler = Double.random(in: 0...1)
-            
-            self.networkManager.fetchCaptcha(randomDobbler)
+            self.networkManager.fetchCaptcha(getRandomDouble())
         }
+    }
+    
+    func getRandomDouble() -> Double {
+        return Double.random(in: 0...1)
     }
 }
 

@@ -23,6 +23,7 @@
 "login.password" = "Password";
 "login.schmusi" = "Schmusi123";
 "login.login" = "Login";
+"login.captcha.placeholder" = "cAPtCha";
 
 //Post Overview
 "uploadedBy %@" = "Uploaded by %@";
