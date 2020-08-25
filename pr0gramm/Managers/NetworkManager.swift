@@ -31,23 +31,28 @@ class NetworkManager: ObservableObject {
     
     private func fetchPosts(_ url : URL) {
         
-        let data = fetch(url)
+        var populator: ((Data) -> Void)
         
-        if !data.isEmpty {
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .secondsSince1970
-            
-            if let results = try? decoder.decode(ItemResult.self, from: data) {
-                DispatchQueue.main.async {
-                    self.items = results.items
+        func populatorFunc(data: Data) -> Void {
+            if !data.isEmpty {
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .secondsSince1970
+                
+                if let results = try? decoder.decode(ItemResult.self, from: data) {
+                    DispatchQueue.main.async {
+                        self.items = results.items
+                    }
+                } else {
+                    print("ERROR: Decoder Error:")
                 }
             } else {
-                print("ERROR: Decoder Error:")
+                print("ERROR: No data received!")
             }
-        } else {
-            print("ERROR: No data received!")
         }
         
+        populator = populatorFunc
+        
+        fetch(url, populator)
     }
     
     func fetchCaptcha(_ bust : Double) {
@@ -55,27 +60,33 @@ class NetworkManager: ObservableObject {
             return
         }
         
-        let data = fetch(url)
+        var populator: ((Data) -> Void)
         
-        if !data.isEmpty {
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .secondsSince1970
-            
-            if let result = try? decoder.decode(CaptchaResult.self, from: data) {
-                DispatchQueue.main.async {
-                    print(result)
-                    self.captcha = result
+        func populatorFunc(data: Data) -> Void {
+            if !data.isEmpty {
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .secondsSince1970
+                
+                if let result = try? decoder.decode(CaptchaResult.self, from: data) {
+                    DispatchQueue.main.async {
+                        print(result)
+                        self.captcha = result
+                    }
+                } else {
+                    print("ERROR: Decoder Error:")
                 }
             } else {
-                print("ERROR: Decoder Error:")
+                print("ERROR: No data received!")
             }
-        } else {
-            print("ERROR: No data received!")
         }
+        
+        populator = populatorFunc
+        
+        fetch(url, populator)
+        
     }
     
-    private func fetch(_ url : URL) -> Data {
-        var returnData = Data()
+    private func fetch(_ url : URL, _ populator: @escaping (Data) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
                 return
@@ -86,15 +97,13 @@ class NetworkManager: ObservableObject {
                     return
                 }
                 
-               returnData = unwrappedData
+               populator(unwrappedData)
                 
             } else {
                 print("ERROR: Request failed")
             }
         }
         task.resume()
-        
-        return returnData
     }
     
 }
