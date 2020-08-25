@@ -28,7 +28,7 @@ struct URLImage: View {
                         ProgressView()
                     )
             } else {
-                Image(uiImage: ((remoteImageManager.imageData.isEmpty) ? UIImage(systemName: "xmark.octagon") : UIImage(data: remoteImageManager.imageData)!)!)
+                Image(uiImage: ((remoteImageManager.imageData.isEmpty) ? UIImage(systemName: "exclamationmark.triangle") : UIImage(data: remoteImageManager.imageData)!)!)
                     .resizable()
             }
         }.onAppear {
