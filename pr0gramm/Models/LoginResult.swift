@@ -11,10 +11,13 @@ import Foundation
 struct LoginResult: Decodable {
     
     var success: Bool
-    var identifier: String
+    var identifier: String?
     var ts: Date
     var rt: Int
     var qc: Int
+    var error: String?
+    var ban: Bool?
+    var cache: String?
     
     init() {
         success = false
@@ -22,6 +25,9 @@ struct LoginResult: Decodable {
         ts = Date()
         rt = 0
         qc = 0
+        error = nil
+        ban = nil
+        cache = nil
     }
     
 }

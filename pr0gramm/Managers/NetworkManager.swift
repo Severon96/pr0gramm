@@ -114,6 +114,7 @@ class NetworkManager: ObservableObject {
                 
                 if let result = try? decoder.decode(LoginResult.self, from: data) {
                     DispatchQueue.main.async {
+                        print(result)
                         self.login = result
                     }
                 } else {
@@ -168,7 +169,13 @@ class NetworkManager: ObservableObject {
                 guard let unwrappedData = data else {
                     return
                 }
-
+                
+                if let cookieValue = res.value(forHTTPHeaderField: "Set-Cookie") {
+                    let cookie = HTTPCookie.cookies(withResponseHeaderFields: ["Set-Cookie": cookieValue], for: URL(string: "https://pr0gramm.com/")!)
+                    
+                    HTTPCookieStorage.shared.setCookies(cookie, for: URL(string: "https://pr0gramm.com/")!, mainDocumentURL: URL(string: "https://pr0gramm.com/")!)
+                }
+                
                 populator(unwrappedData)
                 
             } else {

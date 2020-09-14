@@ -39,6 +39,7 @@ struct LoginView: View {
                 Button(action: {
                     networkManager.doLogin(user: user, pass: pass, captcha: captcha, token: networkManager.captcha.token)
                     networkManager.fetchCaptcha(getRandomDouble())
+                    self.captcha = ""
                 }, label: {
                     Text("login.login")
                 })
@@ -47,7 +48,7 @@ struct LoginView: View {
                 if(networkManager.login.success) {
                     Text("Success \(networkManager.login.ts)")
                 } else {
-                    Text("No success \(networkManager.login.ts)")
+                    Text("No success \(networkManager.login.ts) because of \(networkManager.login.error ?? "no error")")
                 }
             }
             
